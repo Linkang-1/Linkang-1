@@ -1,0 +1,32 @@
+package LINKANKI;
+
+import org.openqa.selenium.WindowType;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class NewTab {
+
+	public static void main(String[] args) {
+		
+		System.setProperty("webdriver.chrome.driver","F:\\browserdrivers\\chromedriver_win32\\chromedriver.exe");
+		
+		ChromeDriver driver = new ChromeDriver();
+		
+		driver.get("https://www.amazon.in/ref=nav_logo");
+		
+		driver.switchTo().newWindow(WindowType.TAB);
+		
+		driver.get("https://www.google.com/?hl=en-US&authuser=1");
+		
+		driver.switchTo().newWindow(WindowType.TAB);
+
+		driver.get("https://www.youtube.com/");
+		
+		driver.switchTo().newWindow(WindowType.TAB);
+		
+		driver.get("https://www.google.com/?hl=en-US&authuser=1");
+		
+		driver.quit();
+
+	}
+
+}
