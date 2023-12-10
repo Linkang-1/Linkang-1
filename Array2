@@ -1,0 +1,21 @@
+package ARRAY;
+
+public class ARRAY2 {
+
+	public static void main(String[] args) {
+		
+	int a[]=new int [3];  // 3 is the size/length of array 
+		
+		a[0]=10;        //initilization
+		a[1]=20;       //initilization
+		a[2]=30;      //initilization
+	
+
+		for (int i=0; i<3;i++) // for loop use when we know the limit 
+		{
+			System.out.println(a[i]); // it will gives output line by line
+		}
+		
+	}
+
+}
