@@ -1,0 +1,19 @@
+package CONSTRUCTOR;
+
+public class WHAT_IS_CONSTRUCTOR {
+
+//	 constructor is used to initialize objects. 
+//	 constructor in Java is similar look like a method but it is not a method 
+//	 this is called when an object of the class is created in main method.
+//	 constructor has the same name as that of the class name and does not have any return type.
+	  
+//	 For example, 
+
+		public static void main(String[] args) { //main method
+			
+			WHAT_IS_CONSTRUCTOR A =new WHAT_IS_CONSTRUCTOR();
+	
+			//Here, WHAT_IS_CONSTRUCTOR() is a constructor.
+		}
+	}
+
