@@ -1,0 +1,38 @@
+package LINKANKI;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class getTitle {
+
+	public static void main(String[] args) throws InterruptedException {
+		
+		System.setProperty("webdriver.chrome.driver", "F:\\browserdrivers\\chromedriver_win32\\chromedriver.exe");
+		
+		WebDriver driver=new ChromeDriver();
+	
+		driver.get("https://www.google.co.in/");
+		
+		String title=driver.getTitle(); //object creation
+		
+		System.out.println(title); //get title of that page 
+		
+		String act=driver.getTitle(); // act object creation
+		
+		String exp="Google"; //title to find in string 
+		
+		if(act.equals(exp))
+		{
+			System.out.println("pass"); //if title is present print pass
+		}
+		else
+		{
+			System.out.println("fail"); // if title is not present print fail
+		}
+		
+		Thread.sleep(3000);
+		
+		driver.close();
+	}
+
+}
