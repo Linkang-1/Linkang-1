@@ -1,0 +1,29 @@
+package CONSTRUCTOR;
+
+public class employee {
+
+	int emp_id;
+	
+	String emp_name;
+	
+	employee(int emp_id,String emp_name)
+	{
+		
+		this.emp_id=emp_id;
+		
+		this.emp_name=emp_name;
+		
+		System.out.println(emp_id+ " "+emp_name);
+	}
+	public static void main(String[] args) {
+		
+		employee e1 =new employee(1001,"linkan");
+
+		employee e2 =new employee(1002,"hemendra");
+
+		employee e3 =new employee(1003,"kshiteej");
+		
+	
+	}
+	
+}
