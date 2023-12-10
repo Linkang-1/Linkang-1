@@ -1,0 +1,26 @@
+package LINKANKI;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class FacebookLinks {
+
+	public static void main(String[] args) {
+		
+		System.setProperty("webdriver.chrome.driver","F:\\browserdrivers\\chromedriver_win32\\chromedriver.exe");
+	      
+	    WebDriver driver=new ChromeDriver();
+		
+		driver.get("https://www.facebook.com/");
+		
+		int links=driver.findElements(By.tagName("a")).size();
+		
+		System.out.println(links); //gives output in number of links present on that page
+		
+		driver.quit();
+      
+
+	}
+
+}
