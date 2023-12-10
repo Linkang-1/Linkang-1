@@ -1,0 +1,12 @@
+package INHERITANCE_REUSABILITY;
+
+public class WHAT_IS_INHERITANCE {
+
+//	 Inheritance refers reusability of code from other class
+//	 When a class derives from another class is called subclass. 
+//	 The child class will inherit all the public and protected
+//	 properties and methods from the parent class. In addition, 
+//	 it can have its own properties and methods.
+//	 to inherited class we use the "extends" keyword.
+
+}
