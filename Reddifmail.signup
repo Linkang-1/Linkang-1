@@ -1,0 +1,98 @@
+package LINKANKI;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class Reddifmail {
+
+	public static void main(String[] args) throws InterruptedException {
+		
+				System.setProperty("webdriver.chrome.driver","F:\\browserdrivers\\chromedriver_win32\\chromedriver.exe");
+			
+				WebDriver driver = new ChromeDriver();
+			
+				
+				driver.manage().window().maximize();
+				
+				driver.get("https://register.rediff.com/register/register.php?FormName=user_details");
+				
+				// Full Name
+				 driver.findElement(By.cssSelector("input[name^=name]")).sendKeys("Linkan Gajbhiye");
+				 
+				 // email id
+				 driver.findElement(By.cssSelector("input[name^=login]")).sendKeys("er.linkangajbhiye"); 
+				 
+				 // check availability
+				 driver.findElement(By.cssSelector("input[name^=btnchkava]")).click();
+				 
+				 // password
+				 driver.findElement(By.cssSelector("input[name^=passwd]")).sendKeys("Saymyname@123"); 
+				 driver.findElement(By.cssSelector("em[id=eyeiconNew]")).click();
+				 // confirm password
+				 driver.findElement(By.cssSelector("input[name^=confirm_pass]")).sendKeys("Saymyname@123");
+				 driver.findElement(By.cssSelector("em[id=eyeiconRe]")).click();
+				 
+				 // check if u have alternate email id
+				 driver.findElement(By.cssSelector("input[name^=altemail]")).sendKeys("er.linkangajbhiye@gmail.com");
+				 driver.findElement(By.cssSelector("input[type=checkbox]")).click();
+				 
+				 // security question drop down menu
+				WebElement drop5 = driver.findElement(By.cssSelector("select[name^=hint]"));
+				 Select sec5 = new Select(drop5);	 
+				 sec5.selectByVisibleText("What is the name of your first school?");
+				 
+				 
+				 // answer of security question
+				 driver.findElement(By.cssSelector("input[type=password]")).sendKeys("R.U.J.C");
+				 
+				 
+				// mother name
+				 driver.findElement(By.cssSelector("input[name^=mothername]")).sendKeys("Mamta Narendra Gajbhiye");
+
+				 // mo.no.
+				 //driver.findElement(By.xpath("//li[text()=\"United Kingdom (+44)\"]")).click();
+				 
+				 driver.findElement(By.cssSelector("#mobno")).sendKeys("8698272229");
+				 
+				 // DAY
+				 WebElement drop = driver.findElement(By.cssSelector("select[name^=\"DOB_Day\"]"));
+				 Select sec = new Select(drop);
+				 sec.selectByValue("07");
+				
+				 // MONTH
+				 WebElement drop1 = driver.findElement(By.cssSelector("select[name^=\"DOB_Month\"]"));
+				 Select sec1 = new Select(drop1);
+				 sec1.selectByVisibleText("MAY");
+				
+				 // YEAR
+				 WebElement drop2 = driver.findElement(By.cssSelector("select[name^=\"DOB_Year\"]"));
+				 Select sec2 = new Select(drop2);
+				 sec2.selectByValue("1995");
+				 
+				 // gender
+				 driver.findElement(By.cssSelector("input[value=m]")).click();
+				 
+				 // country	
+				 WebElement drop3 = driver.findElement(By.cssSelector("#country"));
+				 Select sec3 = new Select(drop3);	 
+				 sec3.selectByVisibleText("India");
+				 
+				 // city
+				 WebElement drop4 = driver.findElement(By.cssSelector("select[name^=city]"));
+				 Select sec4 = new Select(drop4);	
+				 sec4.selectByVisibleText("Pune");
+				 
+				 Thread.sleep(15000);
+				 
+				 // CAPTCHA 
+				 driver.findElement(By.cssSelector(".captcha")).sendKeys("K7NQ");
+				 
+				 Thread.sleep(10000);
+				 
+				 // CREATE AN ACCOUNT
+				 driver.findElement(By.cssSelector("#Register")).click();
+				 
+				 Thread.sleep(3000);
+				 driver.quit();
