@@ -1,0 +1,10 @@
+package ENCAPSULATION_HIDING;
+
+public class WHAT_IS_ENCAPSULATION {
+
+	//Hiding data behind the getter and setter methods.
+	//We use it for data hiding that prevents the user to access the implementation details.
+	//This is called information hiding....
+	//School bag is one of the most real examples of Encapsulation.
+	//e.g. only school bag is visible to other but what inside that school bag is not visible to other.
+}
