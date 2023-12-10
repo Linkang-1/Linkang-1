@@ -1,0 +1,20 @@
+package STRING;
+
+public class REVERSE_STRING {
+
+	public static void main(String[] args) {
+		
+		String s="Linkan Gajbhiye"; // write string which u want to reverse
+		
+		String rev=""; // take empty string to store values in it
+		
+		for(int i=s.length()-1; i>=0; i--) // use for loop with arguments  
+		{
+			rev=rev+s.charAt(i); //use charat method to call charactor place value and add it with rev
+			
+		}
+		System.out.println(rev); //use to print the output which will the reverse string
+	}
+
+}
+
