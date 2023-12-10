@@ -1,0 +1,32 @@
+package STRING;
+
+public class PALINDROME {
+
+	public static void main(String[] args) { 
+	
+		String s="mom"; // write string which u want to reverse
+		
+		String rev=""; // take empty string to store values in it
+		
+		int length=s.length(); // find the length of string s and store it in length variable
+		
+		for(int i=length-1; i>=0; i--) // use for loop with arguments  
+		{
+			rev=rev+s.charAt(i); //use charat method to call charactor place value and add it with rev
+			
+		}
+		System.out.println(rev); //use to print the output which will the reverse string
+		
+		if (s.equals(rev)) // use if else block to check whether it is palindrome string or not
+		{
+			System.out.println("string is palindrome");  //print this if condition is true
+		}
+		else
+		{
+			System.out.println("string is not palindrome");  //print this if condition is is falser frt
+		}
+		
+	}
+
+
+}
