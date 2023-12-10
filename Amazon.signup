@@ -1,0 +1,45 @@
+package LINKANKI;
+
+import java.time.Duration;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Amazon {
+
+	public static void main(String[] args) throws InterruptedException {
+		
+		System.setProperty("webdriver.chrome.driver","F:\\browserdrivers\\chromedriver_win32\\chromedriver.exe");
+		
+		WebDriver driver=new ChromeDriver();
+		
+		driver.manage().window().maximize();
+		driver.manage().deleteAllCookies();
+		driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
+		
+		driver.get("https://www.amazon.in/ap/register?openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.return_to=https%3A%2F%2Fwww.amazon.in%2Fref%3Drhf_sign_in&openid.assoc_handle=inflex");
+		
+		WebElement firstname=driver.findElement(By.xpath("//input[@id=\"ap_customer_name\"]"));
+		firstname.sendKeys("Linkan Gajbhiye");
+		
+		WebElement mobileno=driver.findElement(By.xpath("//input[@id=\"ap_phone_number\"]"));
+		mobileno.sendKeys("8698272229");
+		
+		WebElement email=driver.findElement(By.xpath("//input[@id=\"ap_email\"]"));
+		email.sendKeys("linkangajbhiye@gmail.com");
+		
+		WebElement password=driver.findElement(By.xpath("//input[@id=\"ap_password\"]"));
+		password.sendKeys("Linkan@123");
+		
+		WebElement submitbtn=driver.findElement(By.xpath("//input[@id=\"continue\"]"));
+		submitbtn.click();
+		
+		Thread.sleep(3000);
+		driver.quit();	
+	}
+
+}
