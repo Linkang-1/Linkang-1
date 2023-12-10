@@ -1,0 +1,76 @@
+package XPATH;
+
+public class ALL_LOCATORS_SYNTAX {
+
+	public static void main(String[] args) {
+		
+			// LOCATROS :-
+		
+		// (BY.ID("VALUE"))
+		
+		// (BY.NAME("VALUE"))
+		
+		// (BY.CLASSNAME("VALUE"))
+		
+		// (BY.TAGNAME("VALUE"))
+		
+		// (BY.LINKTEXT("VALUE"))
+		
+		// (BY.PARTIALLINKTEXT("VALUE"))
+		
+		
+				// RELATIVE XPATH :-
+		
+		//  XPATH BY text =}     //tagName[text()="value"]
+		
+		//  XPATH BY ATTRIBUTE =} //tagName[@attribute="value"]
+		
+		//  XPATH BY contains =} //tagName[contains(text(),"value")] 
+		//  XPATH BY contains =} //tagName[contains(@attribute,"value")] 
+		
+		//  XPATH BY INDEX//tagName[@attribute="value"][index number]
+		//  XPATH BY INDEX (//tagName[@attribute="value"][index number])[index number]
+		
+		//  LOGICAL AND XPATH =}  //tagName[@attribute="value" AND @attribute="value"] 		
+		//  LOGICAL OR XPATH =}  //tagName[@attribute="value" OR @attribute="value"] 
+		
+		//  XPATH BY STARTS-WITH =}  //tagName[starts-with(@attribute,"value")] =partial link text
+		
+		//  XPATH BY CHAIN =}//tagName[@attribute="value"]//tagName[@attribute="value"] =down
+		
+		//  XPATH BY FOLLOWING =} //tagName[@attribute="value"]//following::tagName =down
+		
+		// XPATH BY ANCESTOR =} //tagName[@attribute="value"]//ancestor::tagName =top
+		
+		// XPATH BY CHILD =} //tagName[@attribute="value"]//child::tagName =down
+		
+		// XPATH BY FOLLOWING SIBLING =} //tagName[@attribute="value"]//following-sibling::tagName =down
+		
+		// XPATH BY PRECEDING =} //tagName[@attribute="value"]//preceding::tagName =top
+		
+		// XPATH BY PRECEDING-SIBLING =} //tagName[@attribute="value"]//preceding-sibling::tagName =top
+		
+		// XPATH BY PARENT =} //tagName[@attribute="value"]//parent::tagName =top
+		
+		// XPATH BY DESCANDANT =} //tagName[@attribute="value"]//descendant::tagName =down
+	
+			
+		//  CSS SELECTOR :-
+		
+		// #id value  e.g-} #login
+		
+		//.class value e.g-} .text
+		
+		//tagName[attribute=value] e.g-} input[name="value"]
+		
+		//tagName[attribute^="value"]  =use as starts-with words  "value123"
+		
+		//tagName[attribute$="value"]  =use as a ends-with words  "123value"
+		
+		//tagName[attribute*="value"]  =use as a mid-words   "1value23"
+		
+		
+	
+	}
+
+}
